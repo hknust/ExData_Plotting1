@@ -26,7 +26,7 @@ par(mfrow=c(2,2))
 
 # Plot top left
 with(data.2days, plot(DateTime,Global_active_power,
-     ylab="Global Active Power (kilowatts)",xlab="", type="l"))
+     ylab="Global Active Power",xlab="", type="l"))
 
 # Plot top right
 with(data.2days, plot(DateTime,Voltage,
@@ -38,7 +38,7 @@ with(data.2days, plot(DateTime,Sub_metering_1,
 with(data.2days,lines(DateTime,Sub_metering_2,col="red"))
 with(data.2days,lines(DateTime,Sub_metering_3,col="blue"))
 legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), 
-       lty=c(1,1,1), lwd=c(2.5,2.5,2.5),col=c("black", "blue","red"))
+       lty=c(1,1,1), lwd=c(2.5,2.5,2.5),col=c("black", "blue","red"), bty = "n")
 
 # Plot bottom right
 with(data.2days, plot(DateTime,Global_reactive_power,
